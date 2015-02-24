@@ -24,6 +24,25 @@
             daysOfWeekDisabled: "0,1"
         });
 
+
+        $('#daterangepicker').daterangepicker({
+            timePicker: false,
+            format: 'MM/DD/YYYY h:mm A'
+        }, function(start, end, label) {
+            console.log(start.toISOString(), end.toISOString(), label);
+        });
+
+        /* Time picker
+         * https://github.com/m3wolf/bootstrap3-timepicker
+         */
+        $('#timepicker').timepicker().on('show.timepicker', function(e) {
+            var widget = $('.bootstrap-timepicker-widget');
+            widget.find('.glyphicon-chevron-up').removeClass().addClass('pg-arrow_maximize');
+            widget.find('.glyphicon-chevron-down').removeClass().addClass('pg-arrow_minimize');
+        });
+
+
+
         // disabling dates
         var nowTemp = new Date();
         var now = new Date(nowTemp.getFullYear(), nowTemp.getMonth(), nowTemp.getDate(), 0, 0, 0, 0);
@@ -74,7 +93,7 @@
         setTimeout(function() {
             $('#wysiwyg5').wysihtml5({
                 html: true,
-                stylesheets: [getBaseURL() + "/pages/css/editor.css"],
+                stylesheets: ["pages/css/editor.css"],
                 customTemplates: myCustomTemplates
             });
         }, 500);

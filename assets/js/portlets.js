@@ -115,17 +115,21 @@
     if (!jQuery().sortable) {
         return;
     }
-    $(".sortable").sortable({
-        connectWith: '.sortable',
-        iframeFix: false,
-        items: 'div.panel',
-        opacity: 0.8,
-        helper: 'original',
-        revert: true,
-        forceHelperSize: true,
-        placeholder: 'sortable-box-placeholder round-all',
+
+    $(".sortable .row .col-md-6").sortable({
+        connectWith: ".sortable .row .col-md-6",
+        handle: ".panel-heading",
+        cancel: ".portlet-close",
+        placeholder: "sortable-box-placeholder round-all",
+
         forcePlaceholderSize: true,
-        tolerance: 'pointer'
+        tolerance: 'pointer',
+        forceHelperSize: true,
+        revert: true,
+        helper: 'original',
+        opacity: 0.8,
+        iframeFix: false
     });
+
 
 })(window.jQuery);

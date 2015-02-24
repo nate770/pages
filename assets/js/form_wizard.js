@@ -16,18 +16,17 @@
 
                 // If it's the last tab then hide the last button and show the finish instead
                 if ($current >= $total) {
-                    $('#myFormWizard').find('.pager .next').hide();
-                    $('#myFormWizard').find('.pager .finish').show();
-                    $('#myFormWizard').find('.pager .finish').removeClass('disabled');
+                    $('#rootwizard').find('.pager .next').hide();
+                    $('#rootwizard').find('.pager .finish').show().removeClass('disabled hidden');
                 } else {
-                    $('#myFormWizard').find('.pager .next').show();
-                    $('#myFormWizard').find('.pager .finish').hide();
+                    $('#rootwizard').find('.pager .next').show();
+                    $('#rootwizard').find('.pager .finish').hide();
                 }
 
                 var li = navigation.find('li.active');
 
-                var btnNext = $('#myFormWizard').find('.pager .next').find('button');
-                var btnPrev = $('#myFormWizard').find('.pager .previous').find('button');
+                var btnNext = $('#rootwizard').find('.pager .next').find('button');
+                var btnPrev = $('#rootwizard').find('.pager .previous').find('button');
 
                 // remove fontAwesome icon classes
                 function removeIcons(btn) {

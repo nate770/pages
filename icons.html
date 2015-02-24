@@ -252,6 +252,14 @@
                 <a href="lock_screen.html">Lockscreen</a>
                 <span class="icon-thumbnail">ls</span>
               </li>
+              <li class="">
+                <a href="gallery.html">Gallery</a>
+                <span class="icon-thumbnail">gl</span>
+              </li>
+              <li class="">
+                <a href="timeline.html">Timeline</a>
+                <span class="icon-thumbnail">t</span>
+              </li>
             </ul>
           </li>
           <li class="">
@@ -457,8 +465,26 @@
             <div class="pull-left p-r-10 p-t-10 fs-16 font-heading">
               <span class="semi-bold">David</span> <span class="text-master">Nest</span>
             </div>
-            <div class="thumbnail-wrapper d32 circular inline m-t-5">
-              <img src="assets/img/profiles/avatar.jpg" alt="" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg" width="32" height="32">
+            <div class="dropdown pull-right">
+              <button class="profile-dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="thumbnail-wrapper d32 circular inline m-t-5">
+                <img src="assets/img/profiles/avatar.jpg" alt="" data-src="assets/img/profiles/avatar.jpg" data-src-retina="assets/img/profiles/avatar_small2x.jpg" width="32" height="32">
+            </span>
+              </button>
+              <ul class="dropdown-menu profile-dropdown" role="menu">
+                <li><a href="#"><i class="pg-settings_small"></i> Settings</a>
+                </li>
+                <li><a href="#"><i class="pg-outdent"></i> Feedback</a>
+                </li>
+                <li><a href="#"><i class="pg-signals"></i> Help</a>
+                </li>
+                <li class="bg-master-lighter">
+                  <a href="#" class="clearfix">
+                    <span class="pull-left">Logout</span>
+                    <span class="pull-right"><i class="pg-power"></i></span>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
           <!-- END User Info-->
@@ -1628,7 +1654,7 @@
               </div>
               <ul>
                 <!-- BEGIN Note Item !-->
-                <li data-noteid="1" data-navigate="view" data-view-port="#note-views" data-view-animation="push">
+                <li data-noteid="1">
                   <div class="left">
                     <!-- BEGIN Note Action !-->
                     <div class="checkbox check-warning no-margin">
@@ -1644,14 +1670,14 @@
                   <div class="right pull-right">
                     <!-- BEGIN Note Date !-->
                     <span class="date">12/12/14</span>
-                    <a href="#"><i class="fa fa-chevron-right"></i></a>
+                    <a href="#" data-navigate="view" data-view-port="#note-views" data-view-animation="push"><i class="fa fa-chevron-right"></i></a>
                     <!-- END Note Date !-->
                   </div>
                   <!-- END Note Details !-->
                 </li>
                 <!-- END Note List !-->
                 <!-- BEGIN Note Item !-->
-                <li data-noteid="2" data-navigate="view" data-view-port="#note-views" data-view-animation="push">
+                <li data-noteid="2">
                   <div class="left">
                     <!-- BEGIN Note Action !-->
                     <div class="checkbox check-warning no-margin">
@@ -1674,7 +1700,7 @@
                 </li>
                 <!-- END Note List !-->
                 <!-- BEGIN Note Item !-->
-                <li data-noteid="2" data-navigate="view" data-view-port="#note-views" data-view-animation="push">
+                <li data-noteid="2">
                   <div class="left">
                     <!-- BEGIN Note Action !-->
                     <div class="checkbox check-warning no-margin">
@@ -1697,7 +1723,7 @@
                 </li>
                 <!-- END Note List !-->
                 <!-- BEGIN Note Item !-->
-                <li data-noteid="3" data-navigate="view" data-view-port="#note-views" data-view-animation="push">
+                <li data-noteid="3">
                   <div class="left">
                     <!-- BEGIN Note Action !-->
                     <div class="checkbox check-warning no-margin">
@@ -1720,7 +1746,7 @@
                 </li>
                 <!-- END Note List !-->
                 <!-- BEGIN Note Item !-->
-                <li data-noteid="4" data-navigate="view" data-view-port="#note-views" data-view-animation="push">
+                <li data-noteid="4">
                   <div class="left">
                     <!-- BEGIN Note Action !-->
                     <div class="checkbox check-warning no-margin">
@@ -1748,11 +1774,11 @@
             <div class="view note" id="quick-note">
               <div>
                 <ul class="toolbar">
-                  <li><a href="#" class="close-note-link" data-navigate="view" data-view-port="#note-views" data-view-animation="push"><i class="pg-arrow_left"></i></a>
+                  <li><a href="#" class="close-note-link"><i class="pg-arrow_left"></i></a>
                   </li>
-                  <li><a href="#" class="Bold"><i class="fa fa-bold"></i></a>
+                  <li><a href="#" data-action="Bold"><i class="fa fa-bold"></i></a>
                   </li>
-                  <li><a href="#" class="Italic"><i class="fa fa-italic"></i></a>
+                  <li><a href="#" data-action="Italic"><i class="fa fa-italic"></i></a>
                   </li>
                   <li><a href="#" class=""><i class="fa fa-link"></i></a>
                   </li>
@@ -2633,7 +2659,7 @@
               <!-- BEGIN Header  !-->
               <div class="navbar navbar-default">
                 <div class="navbar-inner">
-                  <a href="javascript:;" class="link text-master inline action p-l-10" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
+                  <a href="javascript:;" class="link text-master inline action p-l-10 p-r-10" data-navigate="view" data-view-port="#chat" data-view-animation="push-parrallax">
                     <i class="pg-arrow_left"></i>
                   </a>
                   <div class="view-heading">
@@ -2852,7 +2878,7 @@
     <!-- END OVERLAY -->
     <!-- BEGIN VENDOR JS -->
     <script src="assets/plugins/pace/pace.min.js" type="text/javascript"></script>
-    <script src="assets/plugins/jquery/jquery-1.8.3.min.js" type="text/javascript"></script>
+    <script src="assets/plugins/jquery/jquery-1.11.1.min.js" type="text/javascript"></script>
     <script src="assets/plugins/modernizr.custom.js" type="text/javascript"></script>
     <script src="assets/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
     <script src="assets/plugins/boostrapv3/js/bootstrap.min.js" type="text/javascript"></script>
